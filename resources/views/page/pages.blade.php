@@ -17,35 +17,42 @@
       <a href="{{route('pageCreate')}}" class="w-100 btn btn-outline-primary">Add page</a>
     </div>
 </div>
-
-  <div class="grid-block pages-list manage-pages__content">
-        @if(count($pages) > 0)
-        @foreach ($pages as $page)
-        <div class="grid-block_columm_1">
-          <h2>{{$page->name}}</h2>
-          <ul>
-            <li><span><strong>Link:</strong></span> {{$page->link}}</li>
-            <li><span><strong>Date:</strong></span> {{$page->date}}</li>
-            <li><span><strong>Color:</strong></span> {{$page->color}}</li>
-            <li><span><strong>Code:</strong></span> {{$page->code}}</li>
-          </ul>
-        </div>
-        <div class="grid-block_columm_2">
-        <a href="{{route('pageEdit', $page->id)}}" class="w-100 btn btn-outline-primary">Edit</a>
-        </div>
-        <div class="grid-block_columm_3">
-          <form method="POST" action="{{route('pageDestroy', $page->id)}}" enctype="multipart/form-data" class="crud-form">
-            @csrf 
-            <div class="hidden">
-              <input type="hidden" class="form-control" value="{{$page->id}}" required name="id" />
+      @if(count($pages) > 0)
+      <div class="pages-table_wrap">
+        <div class="pages-table">
+          <div class="grid-block pages-list_head manage-pages__content">
+            <div class="grid-block_columm_1">Name</div>
+            <div class="grid-block_columm_2">Link</div>
+            <div class="grid-block_columm_3">Index date</div>
+            <div class="grid-block_columm_4">Color</div>
+            <div class="grid-block_columm_5">Code</div>
+            <div class="grid-block_columm_6"></div>
+            <div class="grid-block_columm_7"></div>
+          </div>
+          <div class="grid-block pages-list manage-pages__content">
+            @foreach ($pages as $page)
+            <div class="grid-block_columm_1">{{$page->name}}</div>
+            <div class="grid-block_columm_2">{{$page->link}}</div>
+            <div class="grid-block_columm_3">{{$page->date}}</div>
+            <div class="grid-block_columm_4">{{$page->color}}</div>
+            <div class="grid-block_columm_5">{{$page->code}}</div>
+            <div class="grid-block_columm_6">
+            <a href="{{route('pageEdit', $page->id)}}" class="w-100 btn btn-outline-primary">Edit</a>
             </div>
-            <button type="submit" class="w-100 btn btn-danger">Delete</button>
-          </form>      
-        </div>   
-          @endforeach
-        @endif
-       
-  </div>
+            <div class="grid-block_columm_7">
+              <form method="POST" action="{{route('pageDestroy', $page->id)}}" enctype="multipart/form-data" class="crud-form">
+                @csrf 
+                <div class="hidden">
+                  <input type="hidden" class="form-control" value="{{$page->id}}" required name="id" />
+                </div>
+                <button type="submit" class="w-100 btn btn-danger">Delete</button>
+              </form>      
+            </div>   
+              @endforeach   
+          </div>
+        </div>  
+      </div>  
+      @endif 
 </div>
 
 

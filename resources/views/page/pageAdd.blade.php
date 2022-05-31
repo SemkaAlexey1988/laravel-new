@@ -28,25 +28,25 @@
                 <div class="form-group">
                     <label class="col-lg-2 col-md-3 col-sm-4 col-form-label">Link</label>
                     <div class="col-sm-12 col-md-12 col-lg-12">
-                        <input type="text" class="form-control" placeholder="{{ __('Link') }}" name="link" />
+                        <input type="text" class="form-control" placeholder="{{ __('Link') }}" required name="link" />
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-2 col-md-3 col-sm-4 col-form-label">Date</label>
                     <div class="col-sm-12 col-md-12 col-lg-12">
-                        <input type="text" class="form-control" placeholder="{{ __('Date') }}" name="date" />
+                        <input type="text" id="datepicker" class="form-control" placeholder="{{ __('Date') }}" name="date" />
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-2 col-md-3 col-sm-4 col-form-label">Color</label>
                     <div class="col-sm-12 col-md-12 col-lg-12">
-                        <input type="text" class="form-control" placeholder="{{ __('Color') }}" name="color" />
+                        <input type="color" class="form-control input-color" placeholder="{{ __('Color') }}" name="color" />
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-2 col-md-3 col-sm-4 col-form-label">Code</label>
                     <div class="col-sm-12 col-md-12 col-lg-12">
-                        <input type="text" class="form-control" placeholder="{{ __('Code') }}" name="code" />
+                        <input type="text" pattern="^\d{3}$" class="form-control" placeholder="{{ __('Code') }}" required name="code" />
                     </div>
                 </div>
 

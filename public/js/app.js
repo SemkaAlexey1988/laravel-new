@@ -1,3 +1,8 @@
+$( "#datepicker" ).datepicker({
+    dateFormat: "dd-mm-yy"
+});
+
+
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
