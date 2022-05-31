@@ -34,19 +34,19 @@
                 <div class="form-group">
                     <label class="col-lg-2 col-md-3 col-sm-4 col-form-label">Date</label>
                     <div class="col-sm-12 col-md-12 col-lg-12">
-                        <input type="text" id="datepicker" class="form-control" placeholder="{{ __('Date') }}" name="date" />
+                        <input type="text" id="datepicker" class="form-control" placeholder="{{ __('Date') }}" required name="date" />
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-2 col-md-3 col-sm-4 col-form-label">Color</label>
                     <div class="col-sm-12 col-md-12 col-lg-12">
-                        <input type="color" class="form-control input-color" placeholder="{{ __('Color') }}" name="color" />
+                        <input type="color" class="form-control input-color" placeholder="{{ __('Color') }}" required name="color" />
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-2 col-md-3 col-sm-4 col-form-label">Code</label>
                     <div class="col-sm-12 col-md-12 col-lg-12">
-                        <input type="text" pattern="^\d{3}$" class="form-control" placeholder="{{ __('Code') }}" required name="code" />
+                        <input type="text" pattern="^\d{3}$" class="form-control" placeholder="{{ __('Code') }}" required name="code" value="200" />
                     </div>
                 </div>
 
