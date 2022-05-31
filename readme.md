@@ -2,7 +2,7 @@ Commands:
 
 php composer install
 
-# rename .env.example to .env and update it with database credentials
+// rename .env.example to .env and update it with database credentials
 
 php artisan key:generate
 
